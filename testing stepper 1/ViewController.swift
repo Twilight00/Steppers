@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     @IBAction func next(_ sender: UILabel) {
         
         StudentWoStepper.stepValue=0
-        StudentWoCount.text="0"
+        StudentWoCount.text="0"//comment here
     }
     
     override func didReceiveMemoryWarning() {
