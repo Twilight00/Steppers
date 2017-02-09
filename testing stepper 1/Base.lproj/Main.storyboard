@@ -90,6 +90,20 @@
                                     <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uhf-Vw-suD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Money Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWq-qX-P8v">
+                                <frame key="frameInset" minX="42" minY="318" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuO-6i-AQQ">
+                                <frame key="frameInset" minX="182" minY="323" width="60" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -97,6 +111,7 @@
                         <outlet property="StudentWoCount" destination="v4J-DQ-tkP" id="Dq1-j4-zvT"/>
                         <outlet property="StudentWoStepper" destination="Yga-EP-Asy" id="p1b-7U-5Wr"/>
                         <outlet property="functionDisplay" destination="gIK-dT-dYg" id="X4a-VC-ea3"/>
+                        <outlet property="moneyTotal" destination="LuO-6i-AQQ" id="lJ6-Jo-wA3"/>
                         <outlet property="stepper" destination="tRP-cj-seT" id="WZQ-aK-yTy"/>
                         <outlet property="valueLabel" destination="go0-mM-Phn" id="zJ8-ud-2bh"/>
                     </connections>

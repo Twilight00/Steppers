@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     @IBAction func confirmButton(_ sender: UILabel) {
         functionDisplay.text = calculatorreturn().description
         
-        
+        moneyTotal.text = totalHold.description
     }
     
     @IBOutlet weak var StudentWoCount: UILabel!
@@ -65,9 +65,21 @@ class ViewController: UIViewController {
     
     @IBAction func next(_ sender: UILabel) {
         
-        StudentWoStepper.stepValue=0
-        StudentWoCount.text="0"//comment here
+        StudentWoStepper.minimumValue = 0
+        StudentWoCount.text = "0"//comment here
+        valueCount["studentWo"]! = 0
+        
+        
+        valueLabel.text = "0"
+        stepper.minimumValue = 0
+        valueCount["childCount"]! = 0
+        
+        
+        functionDisplay.text = "0"
     }
+    
+    @IBOutlet weak var moneyTotal: UILabel!
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
