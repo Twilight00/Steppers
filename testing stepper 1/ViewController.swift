@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         moneyTotal.text = totalHold.description
     }
     
-    @IBOutlet weak var StudentWoCount: UILabel!
+    @IBOutlet weak var StudentWoCount: UILabel!//
 
     @IBOutlet weak var StudentWoStepper: UIStepper!
     
