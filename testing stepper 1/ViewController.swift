@@ -76,6 +76,7 @@ class ViewController: UIViewController {
         
         
         functionDisplay.text = "0"
+        
     }
     
     @IBOutlet weak var moneyTotal: UILabel!
