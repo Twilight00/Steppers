@@ -15,4 +15,11 @@ return Calculator(One: Counts.ONE, Two: Counts.TWO, Oper: Counts.OPER) + Calcula
 }
 
 //to constantly update and add on to over time to keep track of all (money) purchases added together
-var totalHold = Double(totalCost) + calculatorreturn()
+//var totalHold = Double(totalCost) + calculatorreturn()
+func totalHold() -> Double
+{
+    let holders = Holders()
+    
+    
+    return addCalculator(One: holders.totalHolder, Two: calculatorreturn(), Oper: holders.ADD)
+}

@@ -48,13 +48,53 @@ func Calculator(One: Double, Two : Double, Oper : Character) -> Double
     }
     return answer
 }
+
+//This calculator would allow for adding of last amount to updated amount
+
+func addCalculator(One: Double, Two : Double, Oper : Character) -> Double
+{
+    var answer: Double = 0
+    switch Oper{
+    case Character("+"):
+        answer = One + Two
+        break
+        
+    /*case Character("-"):
+        answer = One - Two
+        break
+        
+    case Character("/"):
+        answer = One / Two
+        break
+        
+    case Character("*"):
+        answer = One * Two
+        break*/
+        
+    default :
+        answer = 0
+        break
+        
+    }
+    return answer
+}
+//create variable to be able to manipulate and have it manipulate to a double 
+
+
 class Counters{
 var ONE: Double = childCost
 var TWO: Double = Double(valueCount["childCount"]!)
 var OPER : Character = "*"
 var THREE: Double = studentWoCost
 var FOUR: Double = Double(valueCount["studentWo"]!)
+
 let zero = "0"}
+
+class Holders{
+    var totalHolder: Double = Double(totalHolders["totalCost"]!)
+    var ADD: Character = "+"
+    
+}
 
 
 //print(Calculator(One: ONE, Two: TWO, Oper:OPER), zero)

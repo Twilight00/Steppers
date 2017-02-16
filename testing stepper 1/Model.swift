@@ -20,10 +20,16 @@ struct Values
     }
     
 }
+//holds setpper count
 var valueCount: [String:Int] = [
     "childCount":0,
     "studentWo":0,
     
     
 ]
-var totalCost = 0
+
+// holds entire cost adding up
+var totalHolders: [String: Double] = [
+    "totalCost":0
+
+]

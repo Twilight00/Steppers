@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     @IBAction func confirmButton(_ sender: UILabel) {
         functionDisplay.text = calculatorreturn().description
         
-        moneyTotal.text = totalHold.description
+        moneyTotal.text = totalHold().description
     }
     
-    @IBOutlet weak var StudentWoCount: UILabel!//
+    @IBOutlet weak var StudentWoCount: UILabel!
 
     @IBOutlet weak var StudentWoStepper: UIStepper!
     
@@ -66,12 +66,14 @@ class ViewController: UIViewController {
     @IBAction func next(_ sender: UILabel) {
         
         StudentWoStepper.minimumValue = 0
+        StudentWoStepper.value=0
         StudentWoCount.text = "0"//comment here
         valueCount["studentWo"]! = 0
         
         
         valueLabel.text = "0"
         stepper.minimumValue = 0
+        stepper.value=0
         valueCount["childCount"]! = 0
         
         
