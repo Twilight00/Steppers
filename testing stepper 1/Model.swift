@@ -18,9 +18,10 @@ struct Values
     mutating func AddDict(Str:String, i:Double){
         //TicketCost
     }
+    var TotMones : Double = 0
     
 }
-//holds setpper count
+//holds stepper count
 var valueCount: [String:Int] = [
     "childCount":0,
     "studentWo":0,

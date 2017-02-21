@@ -11,8 +11,9 @@ import UIKit
 
 
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    var StoredValues = Values()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +48,19 @@ class ViewController: UIViewController {
     @IBAction func confirmButton(_ sender: UILabel) {
         functionDisplay.text = calculatorreturn().description
         
-        moneyTotal.text = totalHold().description
+        
+        StoredValues.TotMones = StoredValues.TotMones + Double(functionDisplay.text!)!
+                
+        StudentWoStepper.minimumValue = 0
+        StudentWoStepper.value=0
+        StudentWoCount.text = "0"//comment here
+        valueCount["studentWo"]! = 0
+        
+        
+        valueLabel.text = "0"
+        stepper.minimumValue = 0
+        stepper.value=0
+        valueCount["childCount"]! = 0
     }
     
     @IBOutlet weak var StudentWoCount: UILabel!
@@ -65,25 +78,22 @@ class ViewController: UIViewController {
     
     @IBAction func next(_ sender: UILabel) {
         
-        StudentWoStepper.minimumValue = 0
-        StudentWoStepper.value=0
-        StudentWoCount.text = "0"//comment here
-        valueCount["studentWo"]! = 0
-        
-        
-        valueLabel.text = "0"
-        stepper.minimumValue = 0
-        stepper.value=0
-        valueCount["childCount"]! = 0
-        
-        
+        moneyTotal.text = /*totalHold().description*/ StoredValues.TotMones.description
+
         functionDisplay.text = "0"
+       
         
     }
     
     @IBOutlet weak var moneyTotal: UILabel!
     
     
+    @IBAction func Cancel(_ sender: UILabel) {
+        functionDisplay.text = "0"
+         //functionDisplay.value = 0
+        
+    }
+    var currentAmount = 0
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -76,6 +76,7 @@ func addCalculator(One: Double, Two : Double, Oper : Character) -> Double
         break
         
     }
+    
     return answer
 }
 //create variable to be able to manipulate and have it manipulate to a double 
@@ -92,7 +93,7 @@ let zero = "0"}
 
 class Holders{
     var totalHolder: Double = Double(totalHolders["totalCost"]!)
-    var ADD: Character = "+"
+   // var ADD: Character = "+"
     
 }
 
