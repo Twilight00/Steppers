@@ -81,7 +81,7 @@ func addCalculator(One: Double, Two : Double, Oper : Character) -> Double
 }
 //create variable to be able to manipulate and have it manipulate to a double 
 
-
+//allows for the calculator to hold the determinates that allow for the calacultaor to function and add the variables together.
 class Counters{
 var ONE: Double = childCost
 var TWO: Double = Double(valueCount["childCount"]!)

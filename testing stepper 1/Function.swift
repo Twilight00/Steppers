@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//
 func calculatorreturn() -> Double
 {
     let Counts = Counters()
