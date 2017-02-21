@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         
         StoredValues.TotMones = StoredValues.TotMones + Double(functionDisplay.text!)!
-                
+        
         StudentWoStepper.minimumValue = 0
         StudentWoStepper.value=0
         StudentWoCount.text = "0"//comment here
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         stepper.value=0
         valueCount["childCount"]! = 0
     }
-    
+    // here
     @IBOutlet weak var StudentWoCount: UILabel!
 
     @IBOutlet weak var StudentWoStepper: UIStepper!
