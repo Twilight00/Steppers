@@ -10,41 +10,30 @@ import UIKit
 //var StoredVal : Values?
 
 
-
-
 class ViewController: UIViewController {
     var StoredValues = Values()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*stepper.wraps = false
-        stepper.autorepeat = true
-        stepper.maximumValue = 10*/
-        stepper.isContinuous = true
         
     }
+    
     
     @IBOutlet weak var functionDisplay: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
     @IBOutlet weak var stepper: UIStepper!
     @IBAction func stepperValueChange(_ sender: UIStepper) {
-        //valueLabel.text = Int(sender.value).description
-        
-        //StoredVal!.Child = Int(sender.value)
-        
-        //valueLabel.text = StoredVal?.Child.description
-        
-        
-        
        valueCount["childCount"]! = Int(sender.value)
         
         valueLabel.text = valueCount["childCount"]!.description
         
         
-    
-        
     }
+    
+    
+    
+    //purchase button to add the rest to the tally and reset the stepper and text values
     @IBAction func confirmButton(_ sender: UILabel) {
         functionDisplay.text = calculatorreturn().description
         
@@ -62,6 +51,8 @@ class ViewController: UIViewController {
         stepper.value=0
         valueCount["childCount"]! = 0
     }
+    
+    
     // here
     @IBOutlet weak var StudentWoCount: UILabel!
 
@@ -75,25 +66,28 @@ class ViewController: UIViewController {
         
     }
     //below is meant to reset current tally
-    
+    //also meant to show subtotal price before purchase
     @IBAction func next(_ sender: UILabel) {
         
-        moneyTotal.text = /*totalHold().description*/ StoredValues.TotMones.description
-
+        moneyTotal.text = StoredValues.TotMones.description
+        functionDisplay.text = StoredValues.currentAmount.description
         functionDisplay.text = "0"
        
         
     }
     
+    
+    // this is for the all of the money added together
     @IBOutlet weak var moneyTotal: UILabel!
     
-    
+    //meant to cancel the price of subtotal
     @IBAction func Cancel(_ sender: UILabel) {
         functionDisplay.text = "0"
-         //functionDisplay.value = 0
+        StoredValues.TotMones = 0
+        
         
     }
-    var currentAmount = 0
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
