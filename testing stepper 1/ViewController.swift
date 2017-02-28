@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         stepper.minimumValue = 0
         stepper.value=0
         valueCount["childCount"]! = 0
+        subFalse()
     }
     
     
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
         moneyTotal.text = StoredValues.TotMones.description
         functionDisplay.text = StoredValues.currentAmount.description
         functionDisplay.text = "0"
-       
+       subTrue()
         
     }
     
@@ -84,6 +85,7 @@ class ViewController: UIViewController {
     @IBAction func Cancel(_ sender: UILabel) {
         functionDisplay.text = "0"
         StoredValues.TotMones = 0
+        subTrue()
         
         
     }
@@ -94,5 +96,41 @@ class ViewController: UIViewController {
     }
 
 
+
+    func subTrue()
+{
+    SubtotalOut.isHidden = false
+    SubtotalOut.isEnabled = true
+    
+    CancelOut.isHidden = true
+    CancelOut.isEnabled = false
+    
+    PurchaseOut.isHidden = true
+    PurchaseOut.isEnabled = false
+    
 }
+
+func subFalse()
+{
+    SubtotalOut.isHidden = true
+    SubtotalOut.isEnabled = false
+    
+    CancelOut.isHidden = false
+    CancelOut.isEnabled = true
+    
+    PurchaseOut.isHidden = false
+    PurchaseOut.isEnabled = true
+}
+    
+    @IBOutlet weak var SubtotalOut: UIButton!
+    @IBOutlet weak var CancelOut: UIButton!
+    @IBOutlet weak var PurchaseOut: UIButton!
+    
+    
+    
+}
+
+
+
+
 
