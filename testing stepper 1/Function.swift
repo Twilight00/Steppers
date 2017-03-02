@@ -12,7 +12,7 @@ func calculatorreturn() -> Double
 {
     let Counts = Counters()
     
-return Calculator(One: Counts.ONE, Two: Counts.TWO, Oper: Counts.OPER) + Calculator(One: Counts.THREE, Two: Counts.FOUR, Oper: Counts.OPER)//, zero
+return Calculator(One: Counts.ONE, Two: Counts.TWO, Oper: Counts.OPER) + Calculator(One: Counts.THREE, Two: Counts.FOUR, Oper: Counts.OPER) + Calculator(One: Counts.FIVE, Two: Counts.SIX, Oper: Counts.OPER)//, zero
 }
 
 //to constantly update and add on to over time to keep track of all (money) purchases added together

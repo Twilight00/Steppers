@@ -34,11 +34,14 @@ class ViewController: UIViewController {
     
     
     //purchase button to add the rest to the tally and reset the stepper and text values
+    //claculates :subtotal button
     @IBAction func confirmButton(_ sender: UILabel) {
         functionDisplay.text = calculatorreturn().description
         
         
         StoredValues.TotMones = StoredValues.TotMones + Double(functionDisplay.text!)!
+        StoredValues.totalChildCount = StoredValues.totalChildCount + Double(valueLabel.text!)!
+        
         
         StudentWoStepper.minimumValue = 0
         StudentWoStepper.value=0
@@ -50,7 +53,18 @@ class ViewController: UIViewController {
         stepper.minimumValue = 0
         stepper.value=0
         valueCount["childCount"]! = 0
+        
+        ASB.value = 0
+        ASBCount.text = "0"
         subFalse()
+    }
+    @IBOutlet weak var ASB: UIStepper!
+    
+    @IBOutlet weak var ASBCount: UILabel!
+    
+    @IBAction func ASBAction(_ sender: UIStepper) {
+        valueCount["asb"]! = Int(sender.value)
+        ASBCount.text = valueCount["asb"]!.description
     }
     
     
@@ -71,11 +85,14 @@ class ViewController: UIViewController {
     @IBAction func next(_ sender: UILabel) {
         
         moneyTotal.text = StoredValues.TotMones.description
-        functionDisplay.text = StoredValues.currentAmount.description
+        tCC.text = StoredValues.totalChildCount.description
         functionDisplay.text = "0"
        subTrue()
         
     }
+
+    @IBOutlet weak var tCC: UILabel!
+    
     
     
     // this is for the all of the money added together

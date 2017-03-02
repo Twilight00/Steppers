@@ -88,7 +88,8 @@ var TWO: Double = Double(valueCount["childCount"]!)
 var OPER : Character = "*"
 var THREE: Double = studentWoCost
 var FOUR: Double = Double(valueCount["studentWo"]!)
-
+    var FIVE: Double = ASBCost
+var SIX: Double = Double(valueCount["asb"]!)
 let zero = "0"}
 
 class Holders{

@@ -21,11 +21,13 @@ struct Values
     
     var TotMones : Double = 0
     var currentAmount : Double = 0
+    var totalChildCount : Double = 0
 }
 //holds stepper count
 var valueCount: [String:Int] = [
     "childCount":0,
     "studentWo":0,
+    "asb": 0
     
     
 ]
